@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         //--- NUMBER OnClick --------------------------------
         btnNumber0.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 0;
             @Override
             public void onClick(View view) {
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber1.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 1;
             @Override
             public void onClick(View view) {
 
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber2.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 2;
             @Override
             public void onClick(View view) {
 
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber3.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 3;
             @Override
             public void onClick(View view) {
 
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber4.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 4;
             @Override
             public void onClick(View view) {
 
@@ -68,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber5.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 5;
             @Override
             public void onClick(View view) {
 
@@ -75,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber6.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 6;
             @Override
             public void onClick(View view) {
 
@@ -82,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber7.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 7;
             @Override
             public void onClick(View view) {
 
@@ -89,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber8.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 8;
             @Override
             public void onClick(View view) {
 
@@ -96,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnNumber9.setOnClickListener(new View.OnClickListener() {
+            int btnNumber = 9;
             @Override
             public void onClick(View view) {
 
@@ -103,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnDecimalSeparator.setOnClickListener(new View.OnClickListener() {
+            String decimalSeparateur = ",";
             @Override
             public void onClick(View view) {
 
@@ -170,12 +181,19 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewField = (TextView) findViewById(R.id.field_number);
 
         //--- OTHER OnClick --------------------------------
+
+       //textViewField.setText("0");
+
         btnReset.setOnClickListener(new View.OnClickListener() {
+            int btnReset = 0;
             @Override
             public void onClick(View view) {
 
+
             }
         });
+
+
 
 
     }
