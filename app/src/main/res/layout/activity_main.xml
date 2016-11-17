@@ -53,9 +53,9 @@
             android:layout_height="match_parent"
             android:backgroundTint="@color/colorYellowO"
             android:textColor="@color/colorWhite"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:padding="0dp"
-            android:text="÷" />
+            android:text="/" />
 
     </LinearLayout>
 
@@ -94,7 +94,7 @@
             android:text="9" />
 
         <Button
-            android:id="@+id/btn_mlultiplication"
+            android:id="@+id/btn_multiplication"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -139,7 +139,7 @@
             android:text="6" />
 
         <Button
-            android:id="@+id/btn_soustraction"
+            android:id="@+id/btn_subtraction"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -212,7 +212,7 @@
             android:text="0" />
 
         <Button
-            android:id="@+id/btn_virgule"
+            android:id="@+id/btn_decimal_separator"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -222,7 +222,7 @@
             android:text="." />
 
         <Button
-            android:id="@+id/btn_resultat"
+            android:id="@+id/btn_result"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
