@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         Button btnNumber9 = (Button) findViewById(R.id.btn_9);
 
         Button btnDecimalSeparator = (Button) findViewById(R.id.btn_decimal_separator);
+
+
+
 
         //--- NUMBER OnClick --------------------------------
         btnNumber0.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         //*******************************************************
         //        OPERATOR
         //*******************************************************
@@ -179,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnReset = (Button) findViewById(R.id.btn_c);
         TextView textViewField = (TextView) findViewById(R.id.field_number);
+        textViewField.getText();
 
         //--- OTHER OnClick --------------------------------
 
@@ -193,7 +200,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //--- METHOD Number --------------------------------
+        // textViewField.setText(displayResult(textViewField.getText().toString()));
+//        int number;
+//        int btnNumber;
+//        String displayResult(String number) {
+//               if (btnNumber == 0) {
+//                 number = btnNumber;
+//               } else {
+//                  number = number + btnNumber;
+//               }
+//        }
 
 
     }
