@@ -3,6 +3,7 @@ package com.example.fatimapereira.calculator;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,12 +34,17 @@ public class MainActivity extends AppCompatActivity {
     boolean update = false;
     String saveText;
 
+    private CalculatorManager calculatorManager = new CalculatorManager();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        double pour utilisation virgule = ça marche
+//        double test = .1;
+//        Log.e("test", String.valueOf(test));
 
         //*******************************************************
         //        NUMBER
@@ -162,7 +168,8 @@ public class MainActivity extends AppCompatActivity {
         btnDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+//            calculatorManager.operatorAddition(Double.valueOf(textViewField.getText().toString()));
+//               textViewField.setText("");
             }
         });
 
@@ -217,14 +224,13 @@ public class MainActivity extends AppCompatActivity {
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    textViewField.setText("0");
+                textViewField.setText("0");
             }
         });
     }
-        //--- METHOD Number --------------------------------
+    //--- METHOD Number --------------------------------
 
-        //Affichage du chiffre à l'écran
-
+    //Affichage du chiffre à l'écran - Method Polymorphe
     public void displayNumber(String string) {
         saveText = textViewField.getText().toString();
         if (saveText.equals("0")) {
@@ -232,9 +238,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             textViewField.setText(saveText + string);
         }
-
     }
-    // (String.valueOf(btnNumber)) =
+    // (String.valueOf(btnNumber)) = même chose que cast
     public void displayNumber(int btnNumber) {
         saveText = textViewField.getText().toString();
         if (saveText.equals("0")) {
@@ -244,6 +249,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    //Affichage de l'opérateur
 }
 
 
