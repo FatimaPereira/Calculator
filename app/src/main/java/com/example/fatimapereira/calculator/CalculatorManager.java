@@ -1,5 +1,9 @@
 package com.example.fatimapereira.calculator;
 
+import static android.R.attr.action;
+import static com.example.fatimapereira.calculator.Actions.add;
+import static com.example.fatimapereira.calculator.Actions.substract;
+
 /**
  * Created by Human Booster on 18/11/2016.
  */
@@ -9,6 +13,7 @@ public class CalculatorManager {
     private String operator = "";
     private double firstValue;
     private double value;
+    private double newValue;
 
     //*******************************************************
     //        GETTER & SETTER
@@ -29,33 +34,25 @@ public class CalculatorManager {
         this.firstValue = firstValue;
     }
 
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
-    }
 
 
     //*******************************************************
     //        OPERATOR
     //*******************************************************
 
-    public void operatorSwitch(double value) {
-        //saveText = textViewField.getText().toString();
-        switch (operator) {
-            case "+":
-                value = value + firstValue;
-            case "-":
-                value = value + firstValue;
-            case "/":
-                value = value + firstValue;
-            case "*":
-                value = value + firstValue;
-            break;
+    public void operatorSwitch(double number) {
+        switch (action) {
+            case add:
+                number
+                break;
+            case substract:
+                break;
+            case multiply:
+                break;
+            case devide:
+                break;
             default:
-                value = 0000;
+                value = 0;
         }
 
     }

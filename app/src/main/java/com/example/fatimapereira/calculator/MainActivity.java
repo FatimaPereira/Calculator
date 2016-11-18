@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private CalculatorManager calculatorManager = new CalculatorManager();
+
     Button btnNumber0;
     Button btnNumber1;
     Button btnNumber2;
@@ -34,13 +36,14 @@ public class MainActivity extends AppCompatActivity {
     boolean update = false;
     String saveText;
 
-    private CalculatorManager calculatorManager = new CalculatorManager();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        calculatorManager = new CalculatorManager();
 
 //        double pour utilisation virgule = ça marche
 //        double test = .1;
