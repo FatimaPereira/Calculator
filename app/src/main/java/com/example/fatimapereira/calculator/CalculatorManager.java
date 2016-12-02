@@ -10,52 +10,41 @@ import static com.example.fatimapereira.calculator.Actions.substract;
 
 public class CalculatorManager {
 
-    private String operator = "";
-    private double firstValue;
-    private double value;
-    private double newValue;
-
-    //*******************************************************
-    //        GETTER & SETTER
-    //*******************************************************
-    public String getOperator() {
-        return operator;
-    }
-
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
-
-    public double getFirstValue() {
-        return firstValue;
-    }
-
-    public void setFirstValue(double firstValue) {
-        this.firstValue = firstValue;
-    }
-
+    String operator = "";
+    Double firstValue;
+    Double value;
+    Double newValue;
 
 
     //*******************************************************
     //        OPERATOR
     //*******************************************************
 
-    public void operatorSwitch(double number) {
-        switch (action) {
-            case add:
-                number
-                break;
-            case substract:
-                break;
-            case multiply:
-                break;
-            case devide:
-                break;
-            default:
-                value = 0;
-        }
+    public void removeZero() {
 
     }
+
+    public void onClickAddition() {
+
+
+    }
+
+//    public void operatorSwitch(double number) {
+//        switch (action) {
+//            case add:
+//                number
+//                break;
+//            case substract:
+//                break;
+//            case multiply:
+//                break;
+//            case devide:
+//                break;
+//            default:
+//                value = 0;
+//        }
+//
+//    }
 
 }
 

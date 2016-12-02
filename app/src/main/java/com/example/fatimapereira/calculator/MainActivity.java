@@ -8,7 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import hugo.weaving.DebugLog;
+
+import static com.example.fatimapereira.calculator.MainActivity.Actions.add;
+
+public class MainActivity extends AppCompatActivity  {
 
     private CalculatorManager calculatorManager = new CalculatorManager();
 
@@ -34,9 +38,21 @@ public class MainActivity extends AppCompatActivity {
     TextView textViewField;
 
     boolean update = false;
+    boolean clicOperateur = false;
     String saveText;
 
 
+    String operator = "";
+    Double firstValue;
+    Double value;
+    Double newValue;
+
+    public enum Actions {
+        add,
+        substract,
+        multtiply,
+        devide
+    }
 
 
     @Override
@@ -66,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         btnDecimalSeparator = (Button) findViewById(R.id.btn_decimal_separator);
 
 
+
         //--- NUMBER OnClick --------------------------------
         btnNumber0.setOnClickListener(new View.OnClickListener() {
             int number = 0;
@@ -79,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber1.setOnClickListener(new View.OnClickListener() {
             int number = 1;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -87,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber2.setOnClickListener(new View.OnClickListener() {
             int number = 2;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -95,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber3.setOnClickListener(new View.OnClickListener() {
             int number = 3;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -103,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber4.setOnClickListener(new View.OnClickListener() {
             int number = 4;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -111,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber5.setOnClickListener(new View.OnClickListener() {
             int number = 5;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -119,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber6.setOnClickListener(new View.OnClickListener() {
             int number = 6;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -127,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber7.setOnClickListener(new View.OnClickListener() {
             int number = 7;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -135,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber8.setOnClickListener(new View.OnClickListener() {
             int number = 8;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -143,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNumber9.setOnClickListener(new View.OnClickListener() {
             int number = 9;
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -151,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnDecimalSeparator.setOnClickListener(new View.OnClickListener() {
             String number = ".";
+
             @Override
             public void onClick(View view) {
                 displayNumber(number);
@@ -193,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                onClickAddition();
             }
         });
 
@@ -242,6 +269,7 @@ public class MainActivity extends AppCompatActivity {
             textViewField.setText(saveText + string);
         }
     }
+
     // (String.valueOf(btnNumber)) = même chose que cast
     public void displayNumber(int btnNumber) {
         saveText = textViewField.getText().toString();
@@ -254,7 +282,52 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Affichage de l'opérateur
+
+    //*******************************************************
+    //        NEW CLASS
+    //*******************************************************
+    public void removeZero() {
+        if (textViewField.getText().equals("0")) {
+            textViewField.setText("");
+        }
+    }
+
+    public void onClickAddition() {
+        if (operator.equals("+")) {
+            value = value + Double.valueOf(textViewField.getText().toString()).doubleValue();
+            textViewField.setText(String.valueOf(value));
+        }
+    }
+
+    public void plusClick(){
+        if(clicOperateur){
+            onClickAddition();
+            textViewField.setText(String.valueOf(value));
+        }else{
+            value = Double.valueOf(textViewField.getText().toString()).doubleValue();
+            clicOperateur = true;
+        }
+        operator = "+";
+        update = true;
+    }
+
+
+//        public void operatorSwitch(double number) {
+//        switch (Actions) {
+//            case add:
+//                number;
+//                break;
+//            case Actions.substract:
+//                break;
+//            case multiply:
+//                break;
+//            case devide:
+//                break;
+//            default:
+//                value = 0;
+//        }
+//
+//    }
+
 }
-
-
 
